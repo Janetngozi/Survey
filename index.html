@@ -5,35 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Survey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1 id="title">freeCodeCamp Survey Form</h1>
-    <p id="description">
-      Thank you for taking the time to help us improve the platform
+    <div class="title">
+<h1 >freeCodeCamp Survey Form</h1>
+    <p id="description"><i>
+      Thank you for taking the time to help us improve the platform</i>
     </p>
-    <form action="" id="survey-form">
+    </div>
+
+    
+  <form method="post" id="survey-form" action="https://register-demo.freecodecamp.org">
       <fieldset>
-        <label for="name" placeholder="Enter your name"
-          >Name<input type="text" id="name"
+        <div class="rest">
+          <label for="name" 
+          >Name<input name="name" type="text" id="name" required placeholder="Enter your name" class="form-control"/></label>
+        </div>
+        <label for="name" 
+          >Name<input name="name" type="text" id="name" required placeholder="Enter your name" class="form-control"/></label>
+        <label for="email">Email<input type="email" id="email" name="email" required placeholder="Enter your Email" class="form-control"
         /></label>
-        <label for="email" placeholder="Enter your Email"
-          >Email<input type="email" id="email"
-        /></label>
-        <label for="number" placeholder="Age"
-          >Age (optional)<input type="number" id="number"
-        /></label>
-      </fieldset>
-      <label for="dropdown"
-        >Which option best describes your current role?
-        <select name="dropdown" id="dropdown">
-          <option value="">select current role</option>
-          <option value="1">Student</option>
-          <option value="2">Full time Job</option>
-          <option value="3">Full time Learning</option>
-          <option value="4">Prefer not to say</option>
-          <option value="5">Other</option>
-        </select>
+        <label for="number"
+          >Age (optional)<input type="number" id="number" name="number" required placeholder="Age" class="form-control"
+        />
       </label>
+        <label for="dropdown"
+          >Which option best describes your current role?
+          <select name="dropdown" id="dropdown">
+            <option value="">select current role</option>
+            <option value="1">Student</option>
+            <option value="2">Full time Job</option>
+            <option value="3">Full time Learning</option>
+            <option value="4">Prefer not to say</option>
+            <option value="5">Other</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Would you recommend freeCodeCamp to a friend?</legend>
+          <label for="question">
+            <input id="question" type="radio" name="friend" class="inline">
+            Definitely</label>
+        <label for="maybe">
+          <input  id=maybe type="radio" name="friend" class="inline">Maybe</label>
+        <label for="notsure">
+          <input id="notsure" type="radio" name="friend" class="inline">Not sure</label>
+      </fieldset>
+      <fieldset>
+        <label for="dropdown">What is your favorite feature of freeCodeCamp?</label>
+        <select name="dropdown" id="dropdown">
+          <option value="">select an option</option>
+            <option value="1">Challenges</option>
+            <option value="2">Projects</option>
+            <option value="3">Community</option>
+            <option value="4">Open Source</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>What would you like to see improved? (Check all that apply)</legend>
+        <label for="frontend">
+<input id="frontend" type="checkbox" name="improve" class="inline">Front-end Projects</label>
+<label for="backend">
+<input id="backend" type="checkbox" name="improve" class="inline">Back-end Projects</label>
+<label for="data">
+<input id="data" type="checkbox" name="improve" class="inline">Data Visualization</label>
+<label for="challenges">
+<input id="challenges" type="checkbox" name="improve" class="inline">Challenges</label>
+<label for="open">
+<input id="open" type="checkbox" name="improve" class="inline">Open Source Community</label>
+<label for="gitter">
+<input id="gitter" type="checkbox" name="improve" class="inline">Gitter Help rooms</label>
+<label for="videos">
+<input id="videos" type="checkbox" name="improve" class="inline">Videos</label>
+<label for="city">
+<input id="city" type="checkbox" name="improve" class="inline">City Meetups</label>
+<label for="Wiki">
+<input id="Wiki" type="checkbox" name="improve" class="inline">Wiki</label>
+      </fieldset>
+<label for="comments">Any comments or suggestions?
+<textarea id="comments" name="comments"  rows="7" cols="40" placeholder="Enter your comment here" class="form-control"></textarea>
+</label>
+
+ <button type="submit" id="submit" class="submit-button">Submit</button>
+      </fieldset>
     </form>
+    
+    
+    
   </body>
 </html>
